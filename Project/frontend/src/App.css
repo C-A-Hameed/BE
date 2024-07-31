@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #e0e0e0;
+}
+
+.auth form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.auth form div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 100%;
+}
+
+.auth form div input,
+.auth form div textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1.25rem;
+}
+
+.auth form h3 {
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.auth form button {
+  color: white;
+  background: #333;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+  font-weight: 600;
+}
+
+.auth form button:hover {
+  background: #555;
+  cursor: pointer;
+}
+
+nav {
+  padding: 15px 30px;
+  color: white;
+  background-color: #333;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.home {
+  padding: 80px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.home h1 {
+  font-size: 2.75rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.home .create-task {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home .create-task input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 2.15rem;
+  width: 100%;
+}
+
+.home .create-task textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.home .create-task button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+}
+
+.home .create-task button:hover {
+  background-color: #555;
+}
+
+.home .tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.home .tasks .card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.home .tasks .card .task-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.home .tasks .card input {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
+  background: #333;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.home .tasks .card textarea {
+  font-size: 1.25rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.home .tasks .card div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  align-items: center;
+}
+
+.home .tasks .card div button {
+  padding: 10px 20px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 12.5px;
+}
+
+.home .tasks .card div button:first-child {
+  background: red;
+}
+
+.home .tasks .card div button:last-child {
+  background: green;
+}
+
+.home .tasks .card div button:hover {
+  background: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth form {
+    padding: 30px;
+  }
+
+  .auth form h3 {
+    font-size: 2rem;
+  }
+
+  .home h1 {
+    font-size: 2.5rem;
+  }
+
+  .home .create-task input,
+  .home .create-task textarea {
+    font-size: 1.75rem;
+  }
+
+  .home .tasks .card input {
+    font-size: 1.75rem;
+  }
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it appears above other elements */
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #555;
+  }
+  
+
+@media (max-width: 576px) {
+  nav {
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    font-size: 0.875rem;
+  }
+
+  .auth form {
+    padding: 20px;
+  }
+
+  .auth form h3 {
+    font-size: 1.75rem;
+  }
+
+  .home {
+    padding: 60px 15px 15px;
+  }
+
+  .home h1 {
+    margin-top: 30px;
+    font-size: 2rem;
+  }
+
+  .home .create-task input,
+  .home .create-task textarea {
+    font-size: 1.5rem;
+  }
+
+  .home .tasks .card input {
+    font-size: 1.5rem;
+  }
+}
